@@ -7,7 +7,9 @@ import java.util.Map;
 public final class Reports {
     private Reports() {}
 
-    public static String pct(double r) { return Math.round(r * 100) + "%"; }
+    public static int pctInt(double r) { return (int) Math.round(r * 100); }
+
+    public static String pct(double r) { return pctInt(r) + "%"; }
 
     public static String esc(String s) {
         StringBuilder b = new StringBuilder(s.length() + 8);
@@ -101,7 +103,7 @@ public final class Reports {
                 .append(".row{display:grid;grid-template-columns:120px 1fr 150px;gap:16px;align-items:center;margin:10px 0}.bar{background:#e6e9ef;border-radius:6px;height:14px;overflow:hidden}")
                 .append(".fill{height:100%}.ok{background:#2e9e6a}.mid{background:#e0a526}.low{background:#d2503f}table{border-collapse:collapse;width:100%;background:#fff}")
                 .append("th,td{text-align:left;padding:8px 10px;border-bottom:1px solid #e6e9ef;font-size:14px}th{background:#eef1f6}.tag{font-size:12px;padding:2px 8px;border-radius:10px;background:#eef1f6}")
-                .append(".bad{background:#fbe3df;color:#8a2417}.foot{color:#5b6677;font-size:13px;margin-top:32px}</style></head><body><main>");
+                .append(".bad{background:#fbe3df;color:#8a2417}.foot{color:#5b6677;font-size:13px;margin-top:32px}td:last-child{white-space:nowrap}</style></head><body><main>");
         b.append("<h1>Compliance readiness report</h1><div class=\"meta\">").append(esc(a.organisation)).append(" &middot; as of ")
                 .append(a.asOf).append(" &middot; overall ").append(pct(Scoring.overall(now))).append("</div>");
         b.append("<h2>Readiness by framework</h2><div class=\"card\">");

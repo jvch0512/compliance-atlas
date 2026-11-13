@@ -140,6 +140,8 @@ public final class Scoring {
             m.put("unverified", s.unverified());
             m.put("readiness", round(s.readiness()));
             m.put("readinessIfTop5Closed", round(up.get(s.framework()).readiness()));
+            m.put("pct", Reports.pctInt(s.readiness()));
+            m.put("pctIfTop5Closed", Reports.pctInt(up.get(s.framework()).readiness()));
             fl.add(m);
         }
         out.put("frameworks", fl);

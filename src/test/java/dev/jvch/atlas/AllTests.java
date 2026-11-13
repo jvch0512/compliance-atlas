@@ -198,6 +198,17 @@ public final class AllTests {
             for (String line : Reports.csv(cat, a).split("\n")) yes(!line.matches(".*,=.*"), "no raw formula cell: " + line);
         });
 
+        test("dashboard and report show the same rounded percentages", () -> {
+            Assessment a = Assessment.fromJson(Files.readString(Path.of("samples/costa-pay.json")), cat);
+            var sum = Scoring.summaryMap(cat, a);
+            @SuppressWarnings("unchecked") List<Object> fl = (List<Object>) sum.get("frameworks");
+            String md = Reports.markdown(cat, a);
+            for (Object o : fl) {
+                @SuppressWarnings("unchecked") Map<String, Object> f = (Map<String, Object>) o;
+                yes(md.contains(f.get("pct") + "%"), "report shows " + f.get("pct") + "% for " + f.get("label"));
+            }
+        });
+
         test("markdown report has table and disclaimer", () -> {
             Assessment a = Assessment.fromJson(Files.readString(Path.of("samples/costa-pay.json")), cat);
             String md = Reports.markdown(cat, a);

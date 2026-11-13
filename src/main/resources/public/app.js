@@ -46,7 +46,6 @@
     toast.timer = setTimeout(function () { t.hidden = true; }, 3200);
   }
 
-  function pct(r) { return Math.round(r * 100); }
   function level(r) { return r >= 0.75 ? "ok" : r >= 0.4 ? "mid" : "low"; }
   function scoreColor(s) { return s < 0 ? COLORS.na : s >= 1 ? COLORS.full : s > 0 ? COLORS.half : COLORS.zero; }
 
@@ -87,18 +86,18 @@
     state.summary.frameworks.forEach(function (f) {
       var track = h("div", { class: "track" });
       var ghost = h("div", { class: "fill ghost" });
-      ghost.style.width = pct(f.readinessIfTop5Closed) + "%";
+      ghost.style.width = f.pctIfTop5Closed + "%";
       var fill = h("div", { class: "fill " + level(f.readiness) });
-      fill.style.width = pct(f.readiness) + "%";
+      fill.style.width = f.pct + "%";
       track.appendChild(ghost);
       track.appendChild(fill);
       box.appendChild(h("div", { class: "card" },
         h("div", { class: "name", text: f.label }),
-        h("div", { class: "pct", text: pct(f.readiness) + "%" }),
+        h("div", { class: "pct", text: f.pct + "%" }),
         track,
         h("div", { class: "foot" },
           h("span", { text: f.implemented + " done, " + f.partial + " partial, " + f.notStarted + " open" }),
-          h("span", { class: "up", text: "top 5 gaps: " + pct(f.readinessIfTop5Closed) + "%" }))));
+          h("span", { class: "up", text: "top 5 gaps: " + f.pctIfTop5Closed + "%" }))));
     });
   }
 

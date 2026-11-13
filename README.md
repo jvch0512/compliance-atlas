@@ -15,7 +15,7 @@ Teams that answer to several frameworks usually track each one in its own spread
 Requires Java 17+ (no Maven, Gradle or other dependencies).
 
 ```bash
-./build.sh test                                   # javac + built-in test runner, 17 tests
+./build.sh test                                   # javac + built-in test runner, 18 tests
 java -cp out/main dev.jvch.atlas.Main serve samples/costa-pay.json   # web UI on http://127.0.0.1:8500
 ```
 
