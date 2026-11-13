@@ -1,0 +1,378 @@
+{
+  "organisation": "Costa Pay Services S.L. (sample)",
+  "asOf": "2026-11-13",
+  "scope": [
+    "nis2",
+    "iso27001",
+    "ens",
+    "gdpr",
+    "dora"
+  ],
+  "controls": {
+    "GOV-01": {
+      "status": "implemented",
+      "owner": "CEO",
+      "due": "",
+      "notes": "Board reviews cyber risk each quarter.",
+      "evidence": [
+        {
+          "title": "Board minutes Q3 2026",
+          "reviewed": "2026-09-30",
+          "validUntil": null
+        }
+      ]
+    },
+    "GOV-02": {
+      "status": "implemented",
+      "owner": "CISO",
+      "due": "",
+      "notes": "",
+      "evidence": [
+        {
+          "title": "Information security policy v4.2",
+          "reviewed": "2026-02-14",
+          "validUntil": null
+        }
+      ]
+    },
+    "GOV-03": {
+      "status": "partial",
+      "owner": "CISO",
+      "due": "2026-12-15",
+      "notes": "DPO appointed; deputy CISO role still open.",
+      "evidence": []
+    },
+    "RSK-01": {
+      "status": "implemented",
+      "owner": "Risk manager",
+      "due": "",
+      "notes": "",
+      "evidence": [
+        {
+          "title": "Risk register export",
+          "reviewed": "2025-06-01",
+          "validUntil": null
+        }
+      ]
+    },
+    "RSK-02": {
+      "status": "implemented",
+      "owner": "IT operations",
+      "due": "2026-10-01",
+      "notes": "CMDB covers servers, not SaaS or OT.",
+      "evidence": [
+        {
+          "title": "CMDB export",
+          "reviewed": "2026-09-01",
+          "validUntil": null
+        }
+      ]
+    },
+    "RSK-03": {
+      "status": "implemented",
+      "owner": "Internal audit",
+      "due": "",
+      "notes": "",
+      "evidence": [
+        {
+          "title": "Internal audit report 2026",
+          "reviewed": "2026-05-20",
+          "validUntil": null
+        }
+      ]
+    },
+    "ACC-01": {
+      "status": "implemented",
+      "owner": "IAM lead",
+      "due": "2026-11-30",
+      "notes": "Quarterly access reviews done for 60% of systems.",
+      "evidence": [
+        {
+          "title": "Access review Q3",
+          "reviewed": "2026-10-12",
+          "validUntil": null
+        }
+      ]
+    },
+    "ACC-02": {
+      "status": "implemented",
+      "owner": "IAM lead",
+      "due": "",
+      "notes": "",
+      "evidence": [
+        {
+          "title": "Entra ID conditional access export",
+          "reviewed": "2026-10-02",
+          "validUntil": null
+        }
+      ]
+    },
+    "ACC-03": {
+      "status": "not_started",
+      "owner": "IAM lead",
+      "due": "2026-10-31",
+      "notes": "PAM tool selected, not deployed.",
+      "evidence": []
+    },
+    "ACC-04": {
+      "status": "partial",
+      "owner": "Network lead",
+      "due": "2027-01-31",
+      "notes": "Flat network in two offices.",
+      "evidence": []
+    },
+    "OPS-01": {
+      "status": "partial",
+      "owner": "IT operations",
+      "due": "2027-02-28",
+      "notes": "",
+      "evidence": []
+    },
+    "OPS-02": {
+      "status": "implemented",
+      "owner": "SecOps",
+      "due": "",
+      "notes": "Patch SLA: critical 7 days.",
+      "evidence": [
+        {
+          "title": "Scan report Oct 2026",
+          "reviewed": "2026-10-20",
+          "validUntil": null
+        }
+      ]
+    },
+    "OPS-03": {
+      "status": "implemented",
+      "owner": "SecOps",
+      "due": "",
+      "notes": "",
+      "evidence": [
+        {
+          "title": "EDR coverage report",
+          "reviewed": "2026-10-25",
+          "validUntil": null
+        }
+      ]
+    },
+    "OPS-04": {
+      "status": "implemented",
+      "owner": "IT operations",
+      "due": "",
+      "notes": "",
+      "evidence": [
+        {
+          "title": "Change tickets sample Q3",
+          "reviewed": "2026-10-05",
+          "validUntil": null
+        }
+      ]
+    },
+    "OPS-05": {
+      "status": "partial",
+      "owner": "IT operations",
+      "due": "2026-11-20",
+      "notes": "Restore test done once, 2025.",
+      "evidence": [
+        {
+          "title": "Restore test 2025",
+          "reviewed": "2025-03-15",
+          "validUntil": null
+        }
+      ]
+    },
+    "OPS-06": {
+      "status": "partial",
+      "owner": "SecOps",
+      "due": "2026-12-31",
+      "notes": "SIEM live for servers, cloud logs pending.",
+      "evidence": []
+    },
+    "CRY-01": {
+      "status": "implemented",
+      "owner": "Security architect",
+      "due": "",
+      "notes": "",
+      "evidence": [
+        {
+          "title": "Crypto standard v2",
+          "reviewed": "2026-01-10",
+          "validUntil": null
+        }
+      ]
+    },
+    "INC-01": {
+      "status": "implemented",
+      "owner": "SecOps",
+      "due": "",
+      "notes": "",
+      "evidence": [
+        {
+          "title": "IR plan and tabletop report",
+          "reviewed": "2026-06-12",
+          "validUntil": null
+        }
+      ]
+    },
+    "INC-02": {
+      "status": "not_started",
+      "owner": "CISO",
+      "due": "2026-11-05",
+      "notes": "No 24h early-warning template yet.",
+      "evidence": []
+    },
+    "INC-03": {
+      "status": "not_started",
+      "owner": "SecOps",
+      "due": "2027-03-31",
+      "notes": "",
+      "evidence": []
+    },
+    "BCP-01": {
+      "status": "partial",
+      "owner": "BCP manager",
+      "due": "2026-12-20",
+      "notes": "DR plan exists, no full test.",
+      "evidence": []
+    },
+    "BCP-02": {
+      "status": "not_started",
+      "owner": "BCP manager",
+      "due": "2027-01-15",
+      "notes": "",
+      "evidence": []
+    },
+    "TPR-01": {
+      "status": "partial",
+      "owner": "Procurement",
+      "due": "2026-11-30",
+      "notes": "Only critical vendors assessed.",
+      "evidence": []
+    },
+    "TPR-02": {
+      "status": "partial",
+      "owner": "Legal",
+      "due": "2027-01-31",
+      "notes": "",
+      "evidence": []
+    },
+    "TPR-03": {
+      "status": "not_started",
+      "owner": "Procurement",
+      "due": "2026-12-15",
+      "notes": "",
+      "evidence": []
+    },
+    "PPL-01": {
+      "status": "implemented",
+      "owner": "HR",
+      "due": "",
+      "notes": "",
+      "evidence": [
+        {
+          "title": "Training completion 94%",
+          "reviewed": "2026-09-15",
+          "validUntil": null
+        }
+      ]
+    },
+    "PPL-02": {
+      "status": "implemented",
+      "owner": "HR",
+      "due": "",
+      "notes": "",
+      "evidence": [
+        {
+          "title": "Onboarding checklist",
+          "reviewed": "2025-09-01",
+          "validUntil": null
+        }
+      ]
+    },
+    "DEV-01": {
+      "status": "partial",
+      "owner": "Engineering manager",
+      "due": "2027-01-31",
+      "notes": "Dependency and secret scanning in CI, no threat modelling yet.",
+      "evidence": []
+    },
+    "DEV-02": {
+      "status": "implemented",
+      "owner": "CISO",
+      "due": null,
+      "notes": "security.txt published.",
+      "evidence": [
+        {
+          "title": "security.txt and triage SLA",
+          "reviewed": "2026-05-02",
+          "validUntil": null
+        }
+      ]
+    },
+    "TST-01": {
+      "status": "implemented",
+      "owner": "CISO",
+      "due": "",
+      "notes": "",
+      "evidence": [
+        {
+          "title": "Pentest report 2026",
+          "reviewed": "2026-04-08",
+          "validUntil": null
+        }
+      ]
+    },
+    "PRV-01": {
+      "status": "implemented",
+      "owner": "DPO",
+      "due": "",
+      "notes": "",
+      "evidence": [
+        {
+          "title": "RoPA export",
+          "reviewed": "2026-03-01",
+          "validUntil": null
+        }
+      ]
+    },
+    "PRV-02": {
+      "status": "implemented",
+      "owner": "DPO",
+      "due": null,
+      "notes": "DPIA process in the project gate.",
+      "evidence": [
+        {
+          "title": "DPIA register",
+          "reviewed": "2026-08-04",
+          "validUntil": null
+        }
+      ]
+    },
+    "PRV-03": {
+      "status": "implemented",
+      "owner": "DPO",
+      "due": "",
+      "notes": "",
+      "evidence": [
+        {
+          "title": "DSAR log",
+          "reviewed": "2026-10-01",
+          "validUntil": null
+        }
+      ]
+    },
+    "PRV-04": {
+      "status": "partial",
+      "owner": "DPO",
+      "due": "2027-02-15",
+      "notes": "Retention schedule approved, deletion jobs pending.",
+      "evidence": []
+    },
+    "PHY-01": {
+      "status": "not_applicable",
+      "owner": "Facilities",
+      "due": "",
+      "notes": "Fully cloud hosted; offices handled by landlord.",
+      "evidence": []
+    }
+  }
+}

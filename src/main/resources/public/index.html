@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>compliance-atlas</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand"><span class="logo">CA</span><div><h1>compliance-atlas</h1><p>One control library, five frameworks</p></div></div>
+    <div class="meta">
+      <label>Organisation <input id="org" maxlength="100"></label>
+      <label>As of <input id="asof" type="date"></label>
+      <div class="scope" id="scope" role="group" aria-label="Frameworks in scope"></div>
+      <div class="links"><a href="/report.html" target="_blank" rel="noopener">Board report</a><a href="/report.md" target="_blank" rel="noopener">Markdown</a><a href="/gaps.csv" target="_blank" rel="noopener">Gaps CSV</a></div>
+    </div>
+  </header>
+  <main>
+    <section><h2>Readiness</h2><div class="cards" id="cards"></div>
+      <p class="hint">Implemented without valid evidence counts as half. Evidence expires after its date, or after 12 months when no date is set.</p></section>
+    <section><h2>Where to start</h2><p class="hint">Ranked by how many in-scope requirements one control closes, weighted by importance.</p><ol class="gaps" id="gaps"></ol></section>
+    <section><h2>Control matrix</h2><div class="legend" id="legend"></div><div class="matrix-wrap"><table class="matrix" id="matrix"></table></div></section>
+  </main>
+  <aside id="drawer" class="drawer" hidden aria-label="Control details"></aside>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <script src="/app.js"></script>
+</body>
+</html>
